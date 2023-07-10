@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>圣杯布局</title>
+    </head>
+    <style>
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap; /* 让内容换行以适应高度 */
+            min-height: 100vh; /* 设置容器最小高度为视口高度 */
+            margin: 0 auto;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: #d8f2be;
+        }
+
+        .sidebar-left {
+            order: -1; /* 调整左侧边栏位置 */
+        }
+
+        .content {
+            flex: 1 0 auto; /* 让主内容区域自动伸缩 */
+            background-color: #fff;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <div class="sidebar sidebar-left">Left Sidebar</div>
+            <div class="content">Main Content</div>
+            <div class="sidebar sidebar-right">Right Sidebar</div>
+        </div>
+    </body>
+</html>
